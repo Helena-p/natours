@@ -80,7 +80,16 @@ body {
         animation-iteration-count: 3;
         */
 }
-.heading-primary .heading-secondary {
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out;
+  /* short-hand */
+}
+
+.heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -89,14 +98,6 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out;
-  /* short-hand */
 }
 
 /* ----- Button ----- */
