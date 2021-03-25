@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   //selects everything except the last child
@@ -14,7 +13,6 @@
     * selects only classes that contain col- 
     $ selects only classes that end with col- */
   [class^="col-"] {
-    background-color: orangered;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
