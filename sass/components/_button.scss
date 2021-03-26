@@ -34,6 +34,15 @@
       background-color: $color-white;
     }
   }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
   /*
     pseudoelement to illustrate an illusion of an element
      for animation and other effects. Must contain 'content'
