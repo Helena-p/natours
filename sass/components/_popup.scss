@@ -13,16 +13,20 @@
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 0.3rem;
+    display: table;
+    overflow: hidden;
   }
 
   &__left {
     width: 33.33333%;
-    float: left;
+    display: table-cell;
   }
 
   &__right {
     width: 66.66667%;
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
   }
 
   &__img {
@@ -31,5 +35,21 @@
   }
 
   &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    // Creates two columns, gap is 1em default (1em=14px in this case)
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    -webkit-column-rule: 0.1rem solid $color-grey-light-2;
+    -moz-column-rule: 0.1rem solid $color-grey-light-2;
+    column-rule: 0.1rem solid $color-grey-light-2;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
