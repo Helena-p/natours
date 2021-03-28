@@ -15,7 +15,6 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
-    text-align: center;
   }
 
   &__background {
@@ -116,13 +115,37 @@
       content: "";
       position: absolute;
       left: 0;
+      transition: all 0.2s;
     }
 
     &::before {
-      top: -1rem;
+      top: -0.8rem;
     }
     &::after {
-      top: 1rem;
+      top: 0.8rem;
     }
+  }
+
+  // Increases the gap between the nav toggle bars on hover
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(180deg - 45deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-180deg - (-45deg));
   }
 }
