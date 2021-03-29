@@ -8,7 +8,7 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    transition: all 0.2s; /* shorthand for transition */
+    transition: all 0.2s; // shorthand for transition
     position: relative;
     font-size: $default-font-size;
 
@@ -50,10 +50,9 @@
       background-color: $color-primary;
     }
   }
-  /*
-    pseudoelement to illustrate an illusion of an element
-     for animation and other effects. Must contain 'content'
-     */
+
+  // pseudoelement to illustrate an illusion of an element
+  //  for animation and other effects. Must contain 'content'
 
   &::after {
     content: "";
@@ -70,7 +69,7 @@
 
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards; /* make button invisible on pageload */
+    animation-fill-mode: backwards; // make button invisible on pageload
   }
 }
 
