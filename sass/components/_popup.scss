@@ -11,6 +11,14 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  // Graceful degradation
+  @supports (-webkit-backdrop-filter: blur(1rem)) or
+    (backdrop-filter: blur(1rem)) {
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    background-color: rgba($color-black, 0.4);
+  }
+
   &__content {
     @include absolute-centering;
     width: 75%;
