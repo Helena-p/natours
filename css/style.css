@@ -171,9 +171,19 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 3rem !important;
+  }
+}
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-big {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-big {
@@ -395,6 +405,35 @@ body {
   font-size: 6rem;
   font-weight: 100;
 }
+@media only screen and (max-width: 56.25em) {
+  .card {
+    height: auto;
+  }
+  .card__side {
+    height: auto;
+    position: relative;
+    border-radius: 0.3rem;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+  }
+  .card__price-box {
+    margin-bottom: 8rem;
+  }
+  .card__price-value {
+    font-size: 6rem;
+  }
+}
 
 .composition {
   position: relative;
@@ -408,17 +447,45 @@ body {
   transition: all 0.2s;
   outline-offset: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .composition__photo {
+    float: left;
+    position: relative;
+    width: 33.333333%;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
 .composition__photo--p1 {
   top: -2rem;
   left: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p1 {
+    top: 0;
+    transform: scale(1.2);
+  }
 }
 .composition__photo--p2 {
   top: 2rem;
   right: 0;
 }
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p2 {
+    top: -1rem;
+    transform: scale(1.3);
+    z-index: 200;
+  }
+}
 .composition__photo--p3 {
   top: 10rem;
   left: 20%;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p3 {
+    top: 1rem;
+    left: 0;
+    transform: scale(1.1);
+  }
 }
 .composition__photo:hover {
   outline: 1.5rem solid #55c57a;
@@ -439,6 +506,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
+@media only screen and (max-width: 56.25em) {
+  .feature-box {
+    padding: 2rem;
+  }
+}
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
@@ -447,6 +519,11 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media only screen and (max-width: 56.25em) {
+  .feature-box__icon {
+    margin-bottom: 0;
+  }
 }
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
@@ -678,6 +755,12 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
 }
+@media only screen and (max-width: 56.25em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 94%);
+    clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 94%);
+  }
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -700,9 +783,19 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    padding: 8rem 0;
+  }
+}
 .footer__logo-box {
   text-align: center;
   margin-bottom: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__logo-box {
+    margin-bottom: 4rem;
+  }
 }
 .footer__logo {
   width: 15rem;
@@ -712,6 +805,12 @@ body {
   border-top: 0.1rem solid #777;
   padding-top: 2rem;
   display: inline-block;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer__list {
   list-style-type: none;
@@ -741,6 +840,12 @@ body {
   width: 80%;
   float: right;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer__copywrite {
+    width: 100%;
+    float: none;
+  }
+}
 
 .row {
   max-width: 114rem;
@@ -760,6 +865,7 @@ body {
 @media only screen and (max-width: 56.25em) {
   .row {
     max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 .row::after {
@@ -819,6 +925,18 @@ body {
   text-align: center;
   cursor: pointer;
 }
+@media only screen and (max-width: 56.25em) {
+  .navigation__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -829,6 +947,18 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 999;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+@media only screen and (max-width: 56.25em) {
+  .navigation__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 .navigation__nav {
   height: 100vh;
@@ -921,6 +1051,11 @@ body {
   padding: 25rem 0;
   margin-top: -20vh;
 }
+@media only screen and (max-width: 56.25em) {
+  .section-about {
+    padding: 20rem 0;
+  }
+}
 
 .section__features {
   padding: 20rem 0;
@@ -932,30 +1067,51 @@ body {
 .section__features > * {
   transform: skewY(7deg);
 }
+@media only screen and (max-width: 56.25em) {
+  .section__features {
+    padding: 10rem 0;
+  }
+}
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .section-tours {
+    padding: 20rem 0 10rem 0;
+  }
+}
 
 .section__stories {
   padding: 15rem 0;
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .section__stories {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
-.section-book .book {
+@media only screen and (max-width: 56.25em) {
+  .section-book {
+    padding: 10rem 0;
+  }
+}
+
+.book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
   background-size: cover;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   height: 50rem;
 }
-.section-book .book__form {
+.book__form {
   width: 50%;
   padding: 6rem;
 }
