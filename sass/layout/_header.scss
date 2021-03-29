@@ -7,11 +7,23 @@
       rgba($color-primary-light, 0.6),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg); // For small resolution screens
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
+
+  // Whenever the resolution is higher than 192 dots per inch
+  // the code in the @media will be applied
+  // For high resolution screens above 600px screen width and extra large low resolutions screens
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.6),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(tab-port) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 94%);
